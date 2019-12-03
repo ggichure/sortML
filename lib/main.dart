@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'sortML',
       routes: {NamedRoutes.homeScreen: (context) => HomeScreen()},
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+          primarySwatch: Colors.deepOrange,
+          accentColor: Colors.deepOrangeAccent),
       home: SplashScreen(),
     );
   }
@@ -32,6 +32,12 @@ class _SplashScreenState extends State<SplashScreen> {
         Duration(milliseconds: 100),
         () => (Navigator.of(context)
             .pushReplacementNamed(NamedRoutes.homeScreen)));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    startTime();
   }
 
   @override
